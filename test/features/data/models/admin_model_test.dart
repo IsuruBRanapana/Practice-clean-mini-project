@@ -8,6 +8,7 @@ import '../../../fixtures/fixture_reader.dart';
 
 void main() {
   final tAdminModel = AdminModel(
+    uid: 'uid test',
     name: 'name1',
     telNo: '07123456789',
     jobRole: 'job1',
@@ -38,6 +39,7 @@ void main() {
       final result=tAdminModel.toJson();
       //assert
       final expectedMap ={
+        "uid":"uid test",
         "name":"name1",
         "jobRole":"job1",
         "telNo": "07123456789",

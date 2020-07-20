@@ -7,7 +7,7 @@ import 'package:practice/features/domain/entities/user.dart';
 import '../../../fixtures/fixture_reader.dart';
 
 void main(){
-  final tUserModel=UserModel(name: 'name1',telNo: '07123456789',email: 'testing@testing.com',area: 'colombo');
+  final tUserModel=UserModel(uid:'uid test',name: 'name1',telNo: '07123456789',email: 'testing@testing.com',area: 'colombo');
   test('Should be sub class of user entity', ()async{
     //assert
     expect(tUserModel, isA<User>());
@@ -32,6 +32,7 @@ void main(){
       final result=tUserModel.toJson();
       //assert
       final expectedMap ={
+        "uid":"uid test",
         "name":"name1",
         "telNo": "07123456789",
         "email": "testing@testing.com",

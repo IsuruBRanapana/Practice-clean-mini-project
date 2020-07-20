@@ -8,6 +8,9 @@ import '../../../fixtures/fixture_reader.dart';
 
 void main() {
   final tProblemModel = ProblemModel(
+    ownerId: 'owner test',
+    probId: 'prob test',
+    imgUrl: 'img',
     description: 'desc',
     date: DateTime.utc(2020,3,1),
     category: 'Cat',
@@ -41,6 +44,9 @@ void main() {
       final result=tProblemModel.toJson();
       //assert
       final expectedMap ={
+        "ownerId":"owner test",
+        "probId":"prob test",
+        "imgUrl":"img",
         "description": "desc",
         "category": "Cat",
         "location": "colombo",

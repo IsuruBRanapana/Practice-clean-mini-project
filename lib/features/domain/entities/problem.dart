@@ -2,6 +2,9 @@ import 'package:equatable/equatable.dart';
 import 'package:meta/meta.dart';
 
 class Problem extends Equatable {
+  final String ownerId;
+  final String probId;
+  final String imgUrl;
   final String description;
   final DateTime date;
   final String category;
@@ -11,6 +14,9 @@ class Problem extends Equatable {
   final String comment;
 
   Problem({
+    @required this.probId,
+    @required this.ownerId,
+    @required this.imgUrl,
     @required this.description,
     @required this.date,
     @required this.category,

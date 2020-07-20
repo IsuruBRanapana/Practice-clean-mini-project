@@ -3,6 +3,9 @@ import 'package:meta/meta.dart';
 
 class ProblemModel extends Problem {
   ProblemModel({
+    @required String ownerId,
+    @required String probId,
+    @required String imgUrl,
     @required String description,
     @required DateTime date,
     @required String category,
@@ -11,6 +14,9 @@ class ProblemModel extends Problem {
     int dislikes,
     String comment,
   }) : super(
+          ownerId: ownerId,
+          probId:probId,
+          imgUrl:imgUrl,
           description: description,
           date: date,
           category: category,
@@ -22,6 +28,9 @@ class ProblemModel extends Problem {
 
   factory ProblemModel.fromJson(Map<String, dynamic> json) {
     return ProblemModel(
+        ownerId: json['ownerId'],
+        probId: json['probId'],
+        imgUrl: json['imgUrl'],
         description: json['description'],
         date: json['date'],
         category: json['category'],
@@ -33,6 +42,9 @@ class ProblemModel extends Problem {
 
   Map<String, dynamic> toJson() {
     return {
+      "ownerId":ownerId,
+      "probId":probId,
+      "imgUrl":imgUrl,
       "description": description,
       "category": category,
       "location": location,

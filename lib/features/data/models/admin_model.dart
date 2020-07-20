@@ -3,12 +3,14 @@ import 'package:meta/meta.dart';
 
 class AdminModel extends Admin {
   AdminModel({
+    @required String uid,
     @required String name,
     @required String jobRole,
     @required String telNo,
     String email,
     String workAt,
   }) : super(
+          uid: uid,
           name: name,
           jobRole: jobRole,
           telNo: telNo,
@@ -16,23 +18,24 @@ class AdminModel extends Admin {
           workAt: workAt,
         );
 
-  factory AdminModel.fromJson(Map<String,dynamic> json){
+  factory AdminModel.fromJson(Map<String, dynamic> json) {
     return AdminModel(
-      name: json['name'],
-      jobRole: json['jobRole'],
-      telNo: json['telNo'],
-      email: json['email'],
-      workAt: json['workAt']
-    );
+        uid: json['uid'],
+        name: json['name'],
+        jobRole: json['jobRole'],
+        telNo: json['telNo'],
+        email: json['email'],
+        workAt: json['workAt']);
   }
 
-  Map<String,dynamic> toJson(){
+  Map<String, dynamic> toJson() {
     return {
-      'name':name,
-      'jobRole':jobRole,
-      'telNo':telNo,
-      'email':email,
-      'workAt':workAt
+      'uid':uid,
+      'name': name,
+      'jobRole': jobRole,
+      'telNo': telNo,
+      'email': email,
+      'workAt': workAt
     };
   }
 }
