@@ -2,7 +2,7 @@ import 'package:dartz/dartz.dart';
 import 'package:equatable/equatable.dart';
 import 'package:practice/core/errors/failures.dart';
 
-abstract class UseCases<Type,Params>{
+abstract class UseCase<Type,Params>{
   Future<Either<Failure,Type>> call(Params params);
 }
 
