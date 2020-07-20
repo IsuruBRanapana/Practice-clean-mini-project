@@ -1,0 +1,8 @@
+{
+    "description": "desc",
+    "category": "Cat",
+    "location": "colombo",
+    "likes": 1,
+    "dislikes": 1,
+    "comment": "com"
+}
