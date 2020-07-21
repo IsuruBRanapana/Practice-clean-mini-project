@@ -14,6 +14,7 @@ class Problem extends Equatable {
   final int dislikes;
   final String comment;
 
+
   Problem({
     @required this.probId,
     @required this.ownerId,

@@ -1,7 +1,7 @@
 import 'package:json_annotation/json_annotation.dart';
 import 'package:practice/features/domain/entities/admin.dart';
 import 'package:meta/meta.dart';
-
+import 'package:json_annotation/json_annotation.dart';
 part 'admin_model.g.dart';
 
 @JsonSerializable()
@@ -22,8 +22,6 @@ class AdminModel extends Admin {
           workAt: workAt,
         );
 
-  factory AdminModel.fromJson(Map<String, dynamic> data) =>
-      _$AdminModelFromJson(data);
-
-  Map<String, dynamic> toJson() => _$AdminModelToJson(this);
+  factory AdminModel.fromJson(Map<String,dynamic> data)=>_$AdminModelFromJson(data);
+  Map<String,dynamic> toJson()=>_$AdminModelToJson(this);
 }
