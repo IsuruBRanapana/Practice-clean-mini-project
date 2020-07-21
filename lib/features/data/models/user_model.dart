@@ -12,8 +12,10 @@ class UserModel extends User {
     @required String telNo,
     String email,
     String area,
-  }): super(uid:uid, name: name, email: email, area: area, telNo: telNo);
+  }) : super(uid: uid, name: name, email: email, area: area, telNo: telNo);
 
-  factory UserModel.fromJson(Map<String,dynamic> data)=>_$UserModelFromJson(data);
-  Map<String,dynamic> toJson()=>_$UserModelToJson(this);
+  factory UserModel.fromJson(Map<String, dynamic> data) =>
+      _$UserModelFromJson(data);
+
+  Map<String, dynamic> toJson() => _$UserModelToJson(this);
 }

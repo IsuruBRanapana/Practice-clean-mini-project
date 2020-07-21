@@ -32,6 +32,8 @@ class ProblemModel extends Problem {
           comment: comment,
         );
 
-  factory ProblemModel.fromJson(Map<String,dynamic> data)=>_$ProblemModelFromJson(data);
-  Map<String,dynamic> toJson()=>_$ProblemModelToJson(this);
+  factory ProblemModel.fromJson(Map<String, dynamic> data) =>
+      _$ProblemModelFromJson(data);
+
+  Map<String, dynamic> toJson() => _$ProblemModelToJson(this);
 }
