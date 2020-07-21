@@ -20,6 +20,7 @@ void main(){
       imgUrl: "3",
       description: "4",
       date: DateTime.now(),
+      district: "dist",
       category: "5",
       location: "6",
       likes: 7,

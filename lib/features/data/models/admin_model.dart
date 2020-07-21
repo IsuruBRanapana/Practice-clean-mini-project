@@ -1,7 +1,6 @@
 import 'package:json_annotation/json_annotation.dart';
 import 'package:practice/features/domain/entities/admin.dart';
 import 'package:meta/meta.dart';
-import 'package:json_annotation/json_annotation.dart';
 part 'admin_model.g.dart';
 
 @JsonSerializable()
