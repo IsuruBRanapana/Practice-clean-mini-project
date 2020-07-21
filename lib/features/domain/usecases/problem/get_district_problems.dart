@@ -6,19 +6,17 @@ import 'package:practice/core/usecase/usecase.dart';
 import 'package:practice/features/domain/entities/problem.dart';
 import 'package:practice/features/domain/repositories/practice_repository.dart';
 
-class GetDistrictProblems implements UseCase<Problem, Params> {
+class GetDistrictProblems implements UseCase<Problem,Params>{
   final PracticeRepository repository;
-
   GetDistrictProblems(this.repository);
-
   @override
-  Future<Either<Failure, Problem>> call(Params params) async {
+  Future<Either<Failure, Problem>> call(Params params) async{
     return await repository.getDistrictProblems(params.district);
   }
 }
 
-class Params extends Equatable {
+class Params extends Equatable{
   final String district;
 
-  Params({@required this.district}) : super([district]);
+  Params({@required this.district}):super([district]);
 }

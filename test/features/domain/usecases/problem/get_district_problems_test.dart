@@ -5,18 +5,18 @@ import 'package:practice/features/domain/entities/problem.dart';
 import 'package:practice/features/domain/repositories/practice_repository.dart';
 import 'package:practice/features/domain/usecases/problem/get_district_problems.dart';
 
-class MockPracticeRepository extends Mock implements PracticeRepository {}
+class MockPracticeRepository extends Mock implements PracticeRepository{}
 
-void main() {
+void main(){
   GetDistrictProblems usecase;
   MockPracticeRepository mockPracticeRepository;
 
-  setUp(() {
-    mockPracticeRepository = MockPracticeRepository();
-    usecase = GetDistrictProblems(mockPracticeRepository);
+  setUp((){
+    mockPracticeRepository=MockPracticeRepository();
+    usecase=GetDistrictProblems(mockPracticeRepository);
   });
 
-  final tProblem = Problem(
+  final tProblem=Problem(
     probId: '1',
     ownerId: '2',
     imgUrl: '3',
@@ -30,12 +30,11 @@ void main() {
     comment: '9',
   );
 
-  test('should get all problems related to district', () async {
+  test('should get all problems related to district', ()async{
     //arrange
-    when(mockPracticeRepository.getDistrictProblems('dis'))
-        .thenAnswer((_) async => Right(tProblem));
+    when(mockPracticeRepository.getDistrictProblems('dis')).thenAnswer((_) async => Right(tProblem));
     //act
-    final result = await usecase(Params(district: 'dis'));
+    final result=await usecase(Params(district: 'dis'));
     //assert
     expect(result, Right(tProblem));
     verify(mockPracticeRepository.getDistrictProblems(any));
