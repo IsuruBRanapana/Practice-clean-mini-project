@@ -20,28 +20,28 @@ void main() {
     expect(tAdminModel, isA<Admin>());
   });
 
-  group('From json', (){
-    test('Should return valid JSON', ()async{
+  group('From json', () {
+    test('Should return valid JSON', () async {
       //arrange
-      final Map<String, dynamic> jsonMap=json.decode(fixture('admin.json'));
+      final Map<String, dynamic> jsonMap = json.decode(fixture('admin.json'));
 
       //act
-      final result=AdminModel.fromJson(jsonMap);
+      final result = AdminModel.fromJson(jsonMap);
 
       //assert
       expect(result, tAdminModel);
     });
   });
 
-  group('To json', (){
-    test('Should return proper json Map', (){
+  group('To json', () {
+    test('Should return proper json Map', () {
       //act
-      final result=tAdminModel.toJson();
+      final result = tAdminModel.toJson();
       //assert
-      final expectedMap ={
-        "uid":"uid test",
-        "name":"name1",
-        "jobRole":"job1",
+      final expectedMap = {
+        "uid": "uid test",
+        "name": "name1",
+        "jobRole": "job1",
         "telNo": "07123456789",
         "email": "testing@testing.com",
         "workAt": "workAt1"

@@ -14,5 +14,5 @@ class User extends Equatable {
     @required this.telNo,
     this.email,
     this.area,
-  }) : super([uid,name, email, area, telNo]);
+  }) : super([uid, name, email, area, telNo]);
 }

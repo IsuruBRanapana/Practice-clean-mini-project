@@ -16,5 +16,5 @@ class Admin extends Equatable {
     @required this.telNo,
     this.email,
     this.workAt,
-  }) : super([uid,name, jobRole, email, telNo, workAt]);
+  }) : super([uid, name, jobRole, email, telNo, workAt]);
 }

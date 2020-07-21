@@ -1,6 +1,10 @@
+import 'package:json_annotation/json_annotation.dart';
 import 'package:practice/features/domain/entities/admin.dart';
 import 'package:meta/meta.dart';
 
+part 'admin_model.g.dart';
+
+@JsonSerializable()
 class AdminModel extends Admin {
   AdminModel({
     @required String uid,
@@ -18,24 +22,8 @@ class AdminModel extends Admin {
           workAt: workAt,
         );
 
-  factory AdminModel.fromJson(Map<String, dynamic> json) {
-    return AdminModel(
-        uid: json['uid'],
-        name: json['name'],
-        jobRole: json['jobRole'],
-        telNo: json['telNo'],
-        email: json['email'],
-        workAt: json['workAt']);
-  }
+  factory AdminModel.fromJson(Map<String, dynamic> data) =>
+      _$AdminModelFromJson(data);
 
-  Map<String, dynamic> toJson() {
-    return {
-      'uid':uid,
-      'name': name,
-      'jobRole': jobRole,
-      'telNo': telNo,
-      'email': email,
-      'workAt': workAt
-    };
-  }
+  Map<String, dynamic> toJson() => _$AdminModelToJson(this);
 }

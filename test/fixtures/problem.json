@@ -1,8 +1,13 @@
 {
+    "ownerId":"abcd",
+    "probId":"efgh",
+    "imgUrl":"url",
     "description": "desc",
     "category": "Cat",
     "location": "colombo",
+    "district":"disc"
     "likes": 1,
     "dislikes": 1,
-    "comment": "com"
+    "comment": "com",
+    "date":"2020"
 }

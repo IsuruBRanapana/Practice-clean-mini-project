@@ -6,34 +6,39 @@ import 'package:practice/features/domain/entities/user.dart';
 
 import '../../../fixtures/fixture_reader.dart';
 
-void main(){
-  final tUserModel=UserModel(uid:'uid test',name: 'name1',telNo: '07123456789',email: 'testing@testing.com',area: 'colombo');
-  test('Should be sub class of user entity', ()async{
+void main() {
+  final tUserModel = UserModel(
+      uid: 'uid test',
+      name: 'name1',
+      telNo: '07123456789',
+      email: 'testing@testing.com',
+      area: 'colombo');
+  test('Should be sub class of user entity', () async {
     //assert
     expect(tUserModel, isA<User>());
   });
-  
-  group('From json', (){
-    test('Should return valid JSON', ()async{
+
+  group('From json', () {
+    test('Should return valid JSON', () async {
       //arrange
-      final Map<String, dynamic> jsonMap=json.decode(fixture('user.json'));
+      final Map<String, dynamic> jsonMap = json.decode(fixture('user.json'));
 
       //act
-      final result=UserModel.fromJson(jsonMap);
+      final result = UserModel.fromJson(jsonMap);
 
       //assert
       expect(result, tUserModel);
     });
   });
-  
-  group('To json', (){
-    test('Should return proper json Map', (){
+
+  group('To json', () {
+    test('Should return proper json Map', () {
       //act
-      final result=tUserModel.toJson();
+      final result = tUserModel.toJson();
       //assert
-      final expectedMap ={
-        "uid":"uid test",
-        "name":"name1",
+      final expectedMap = {
+        "uid": "uid test",
+        "name": "name1",
         "telNo": "07123456789",
         "email": "testing@testing.com",
         "area": "colombo"

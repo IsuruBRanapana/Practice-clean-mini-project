@@ -9,6 +9,7 @@ class Problem extends Equatable {
   final DateTime date;
   final String category;
   final String location;
+  final String district;
   final int likes;
   final int dislikes;
   final String comment;
@@ -21,6 +22,7 @@ class Problem extends Equatable {
     @required this.date,
     @required this.category,
     @required this.location,
+    @required this.district,
     this.likes,
     this.dislikes,
     this.comment,

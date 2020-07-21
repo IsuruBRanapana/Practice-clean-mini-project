@@ -12,7 +12,8 @@ void main() {
     probId: 'prob test',
     imgUrl: 'img',
     description: 'desc',
-    date: DateTime.utc(2020,3,1),
+    date: DateTime.utc(2020, 3, 1),
+    district: "dist",
     category: 'Cat',
     location: 'colombo',
     likes: 1,
@@ -20,33 +21,33 @@ void main() {
     comment: 'com',
   );
 
-  test('Should be subclass of Problem Entity', ()async{
+  test('Should be subclass of Problem Entity', () async {
     //asset
     expect(tProblemModel, isA<Problem>());
   });
 
-  group('From Json', (){
-    test('Should return valid JSON', ()async{
+  group('From Json', () {
+    test('Should return valid JSON', () async {
       //arrange
-      final Map<String, dynamic> jsonMap=json.decode(fixture('problem.json'));
+      final Map<String, dynamic> jsonMap = json.decode(fixture('problem.json'));
 
       //act
-      final result=ProblemModel.fromJson(jsonMap);
+      final result = ProblemModel.fromJson(jsonMap);
 
       //assert
       expect(result, tProblemModel);
     });
   });
 
-  group('To json', (){
-    test('Should return proper json Map', (){
+  group('To json', () {
+    test('Should return proper json Map', () {
       //act
-      final result=tProblemModel.toJson();
+      final result = tProblemModel.toJson();
       //assert
-      final expectedMap ={
-        "ownerId":"owner test",
-        "probId":"prob test",
-        "imgUrl":"img",
+      final expectedMap = {
+        "ownerId": "owner test",
+        "probId": "prob test",
+        "imgUrl": "img",
         "description": "desc",
         "category": "Cat",
         "location": "colombo",
@@ -54,7 +55,7 @@ void main() {
         "dislikes": 1,
         "comment": "com",
         //must pass date time val correctly
-       // "date":
+        // "date":
       };
       expect(result, expectedMap);
     });
