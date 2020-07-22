@@ -14,8 +14,11 @@ abstract class PracticeRepository {
 
   Future<Either<Failure, Problem>> getDistrictProblems(String district);
 
-  Future<Either<Failure, User>> registerUser(String district);
+  //TODO:user registration must consider again
+  Future<Either<Failure, User>> registerUser();
 
-  Future<Either<Failure, LoginResponse>> getUser(
+  Future<Either<Failure,User>> updateUserDetail(User user);
+
+  Future<Either<Failure, LoginResponse>> getLogin(
       LoginRequestEmailPassword params);
 }

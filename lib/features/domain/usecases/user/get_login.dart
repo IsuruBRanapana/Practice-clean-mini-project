@@ -15,7 +15,7 @@ class GetLogin implements UseCase<LoginResponse, Params> {
 
   @override
   Future<Either<Failure, LoginResponse>> call(Params params) async {
-    return await repository.getUser(params.loginRequestEmailPassword);
+    return await repository.getLogin(params.loginRequestEmailPassword);
   }
 }
 
