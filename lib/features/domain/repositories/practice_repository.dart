@@ -1,5 +1,6 @@
 import 'package:dartz/dartz.dart';
 import 'package:practice/core/errors/failures.dart';
+import 'package:practice/features/data/models/request/add_problem_model.dart';
 import 'package:practice/features/data/models/request/user_register_model.dart';
 import 'package:practice/features/domain/entities/problem.dart';
 import 'package:practice/features/domain/entities/request/login_request_email_password.dart';
@@ -17,8 +18,7 @@ abstract class PracticeRepository {
 
   Future<Either<Failure, User>> registerUser(UserRegisterModel regUser);
 
-  //TODO: consider about add problem
-  Future<Either<Failure,Problem>> addProblem();
+  Future<Either<Failure,Problem>> addProblem(AddProblemModel addProb);
 
   Future<Either<Failure,User>> updateUserDetail(User user);
 

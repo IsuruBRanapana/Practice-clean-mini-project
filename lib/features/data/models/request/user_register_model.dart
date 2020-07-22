@@ -1,6 +1,7 @@
 import 'package:json_annotation/json_annotation.dart';
 import 'package:meta/meta.dart';
-import 'package:practice/features/domain/entities/user_register.dart';
+import 'package:practice/features/domain/entities/request/user_register.dart';
+
 
 part 'user_register_model.g.dart';
 
