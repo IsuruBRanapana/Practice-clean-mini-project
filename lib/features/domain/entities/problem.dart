@@ -4,6 +4,7 @@ import 'package:meta/meta.dart';
 class Problem extends Equatable {
   final String ownerId;
   final String probId;
+  //TODO : change single image to multiple using array
   final String imgUrl;
   final String description;
   final DateTime date;

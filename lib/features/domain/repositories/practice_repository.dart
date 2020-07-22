@@ -17,7 +17,12 @@ abstract class PracticeRepository {
   //TODO:user registration must consider again
   Future<Either<Failure, User>> registerUser();
 
+  //TODO: consider about add problem
+  Future<Either<Failure,Problem>> addProblem();
+
   Future<Either<Failure,User>> updateUserDetail(User user);
+
+  Future<Either<Failure,Problem>> updateProblem(Problem problem);
 
   Future<Either<Failure, LoginResponse>> getLogin(
       LoginRequestEmailPassword params);
